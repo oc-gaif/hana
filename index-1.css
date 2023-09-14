@@ -1,0 +1,197 @@
+body {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgSJ6VxWLyb2g4-idzQAbv-MyOCU8DzVF5i-xO-sKf0ceKZE0-NpmXLCkNLSA1Biu739Y&usqp=CAU);
+    margin: 0;
+    font-family: sans-serif;
+    -ms-overflow-style: scrollbar;
+    -overflow-style: scrollbar;
+    background-color: #0080ff;
+}
+
+main {
+    max-width: 600px;
+    margin-left: 5px;
+    height: 75vh;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgSJ6VxWLyb2g4-idzQAbv-MyOCU8DzVF5i-xO-sKf0ceKZE0-NpmXLCkNLSA1Biu739Y&usqp=CAU);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    animation: alo 8s linear infinite;
+}
+@keyframes alo {
+    from{
+        transform: rotate(8deg) scale(0.8);
+    }
+    to{
+        transform: rotate(-8deg) scale(1);
+    }
+}
+
+.chat-box-container {
+    margin: 0;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 0;
+}
+
+.chat-box-header {
+    display: block;
+    text-align: center;
+    border: 1px solid silver;
+    border-radius: 50%;
+    width: 350px;
+    margin-left: 160px;
+    box-shadow: inset 40px  0px 40px blue,
+    inset 10px 0  80px red,
+    inset 20px 100px 0 2px black;
+    min-height: 80px;
+    color:  rgb(193, 240, 4);
+}
+
+.chat-box {
+    margin: 4px 4px 4px 4px;
+    border: 0;
+    flex-grow: 1;
+    background-color: white;
+    overflow-y: scroll;
+}
+
+.chat-box p {
+    margin: 0;
+    padding: 6px;
+    font-size: 26px;
+}
+
+.ai-person-container {
+    display: block;
+    overflow: auto;
+}
+
+.ai,
+.person {
+    overflow: auto;
+    margin: 4px;
+    border: 2px solid rgb(31, 30, 30);
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.ai {
+    text-align: left;
+    margin-right: 30px;
+    color: rgb(23, 45, 210);
+    border: 0;
+    border-radius: 50% 0%;
+    box-shadow: inset 8px 5px 60px rgb(244, 243, 242) ,inset  10px 0 70px rgb(244, 244, 244),
+    inset 10px 0 90px red,
+    inset 0 40px 10px silver;
+    float: left;
+    border-bottom-left-radius: 0px;
+}
+
+.person {
+    text-align: left;
+    margin-left: 36px;
+    border: 0;
+    border-radius: 50% 50%;
+    box-shadow: inset 8px 5px 60px rgb(44, 32, 218) ,inset  10px 0 70px rgb(6, 44, 94),
+    inset 10px 0 30px rgb(33, 11, 202),
+    inset 0 40px 10px silver;
+    color: rgb(58, 219, 9);
+    float: right;
+    border-bottom-right-radius: 0px;
+}
+
+.ai-date,
+.person-date {
+    
+    text-align: center;
+    border: 0;
+    width: 180px;
+    height: -50px;
+    border-radius: 50% 50%;
+    box-shadow: inset 8px 5px 60px goldenrod ,inset  10px 0 70px rgb(6, 44, 94),
+    inset 10px 0 30px red,
+    inset 0 40px 10px silver;
+    font-size: 20px;
+    color: whitesmoke;
+    clear: both;
+}
+
+.ai-date {
+    float: left;
+    color: whitesmoke;
+    margin-left: 6px;
+}
+
+.person-date {
+    float: right;
+    margin-right: 6px;
+}
+
+.chat-input-container {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.chat-input {
+    height: 40px;
+    width: auto;
+    display: inline-block;
+    flex-grow: 1;
+    padding: 2px 2px 2px 2px;
+    margin: 0 4px 0 4px;
+    font-size: 32px;
+    border: 3px solid silver;
+    color: blue;
+}
+
+.chat-input:focus {
+    outline: 0;
+}
+
+.chat-submit {
+    width: 70px;
+    height: 47px !important;
+    padding: 2px 2px 2px 2px;
+    margin-right: 4px;
+    border: 0;
+    color: green;
+    box-shadow: inset -5px 0 20px goldenrod,
+    inset -1px 1px 20px blue,
+    inset -10px 20px 20px silver;
+    font-size: 18px;
+}
+
+.chat-submit:hover {
+    cursor: pointer;
+    box-shadow: inset -4px 0 10px rgb(207, 199, 199),
+    inset 2px 20px 60px rgb(214, 214, 225);
+}
+
+.chat-submit:focus {
+    outline: 0;
+}
+
+@media screen and (max-width: 480px) {
+.chat-box p {
+    font-size: 30px;
+    }
+.chat-input {
+    width: 60%;
+    float: left;
+    font-size: 28px;
+    }
+.chat-submit {
+    float: right;
+    }
+}
